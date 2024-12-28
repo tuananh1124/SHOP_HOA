@@ -44,7 +44,7 @@ function Header() {
                     <ul className="dropdown-menu menu-danhmuc" aria-labelledby="navbarDropdown">
                       <li>
                         <Link className="dropdown-item" to="/phim-theo-trang-thai/Đang chiếu">
-                          Phim đang chiếu
+                          Phim đang chiếuu
                         </Link>
                       </li>
                       <li>
