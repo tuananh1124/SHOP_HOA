@@ -1,45 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const [fullName, setFullName] = useState('');
-
-  const handleLogionClick = () => {
-    localStorage.setItem('redirectAfterLogin', location.pathname);
-  };
-
-  const getUserFromLocalStorage = () => {
-    const userString = localStorage.getItem('user');
-    if (userString) {
-      const user = JSON.parse(userString);
-      setFullName(user.fullName);
-    } else {
-      setFullName(''); // Nếu không có user, đặt fullName là chuỗi rỗng
-    }
-  };
-
-  useEffect(() => {
-    // Lấy dữ liệu từ localStorage khi component được render lần đầu
-    getUserFromLocalStorage();
-
-    // Dọn dẹp sự kiện khi component bị hủy
-    return () => {
-      window.removeEventListener('storage', getUserFromLocalStorage);
-    };
-  }, []);
-
-  const handleNavigationStatus = (path) => {
-    navigate(path)
-  };
-
-  const handleNavigationGenre = (path) => {
-    navigate(path)
-  };
-
   return (
     <header>
       <div className="container">
@@ -81,20 +43,14 @@ function Header() {
                     </button>
                     <ul className="dropdown-menu menu-danhmuc" aria-labelledby="navbarDropdown">
                       <li>
-                        <button
-                          className="dropdown-item"
-                          onClick={() => handleNavigationStatus('/phim-theo-trang-thai/Đang chiếu')}
-                        >
+                        <Link className="dropdown-item" to="/phim-theo-trang-thai/Đang chiếu">
                           Phim đang chiếu
-                        </button>
+                        </Link>
                       </li>
                       <li>
-                        <button
-                          className="dropdown-item"
-                          onClick={() => handleNavigationStatus('/phim-theo-trang-thai/Sắp chiếu')}
-                        >
+                        <Link className="dropdown-item" to="/phim-theo-trang-thai/Sắp chiếu">
                           Phim sắp chiếu
-                        </button>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -110,28 +66,19 @@ function Header() {
                     </button>
                     <ul className="dropdown-menu menu-danhmuc" aria-labelledby="navbarDropdown">
                       <li>
-                        <button
-                          className="dropdown-item"
-                          onClick={() => handleNavigationGenre('/phim-theo-the-loai/Tình cảm')}
-                        >
+                        <Link className="dropdown-item" to="/phim-theo-the-loai/Tình cảm">
                           Tình cảm
-                        </button>
+                        </Link>
                       </li>
                       <li>
-                        <button
-                          className="dropdown-item"
-                          onClick={() => handleNavigationGenre('/phim-theo-the-loai/Kinh dị')}
-                        >
+                        <Link className="dropdown-item" to="/phim-theo-the-loai/Kinh dị">
                           Kinh dị
-                        </button>
+                        </Link>
                       </li>
                       <li>
-                        <button
-                          className="dropdown-item"
-                          onClick={() => handleNavigationGenre('/phim-theo-the-loai/Hành động')}
-                        >
+                        <Link className="dropdown-item" to="/phim-theo-the-loai/Hành động">
                           Hành động
-                        </button>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -150,24 +97,11 @@ function Header() {
                       <i className="bi bi-bookmark-heart"></i> Yêu thích
                     </Link>
                   </li>
-
-                  {fullName ? (
-                    <li className="nav-item nav-dangnhap">
-                      <Link
-                        className="nav-link"
-                        id="NavDangNhap"
-                        to="/accountProfile"
-                      >
-                        <i className="bi bi-person"></i> {fullName}
-                      </Link>
-                    </li>
-                  ) : (
-                    <li className="nav-item nav-dangnhap">
-                      <Link className="nav-link" id="NavDangNhap" to="/login" onClick={handleLogionClick}>
-                        <i className="bi bi-person"></i> Đăng Nhập
-                      </Link>
-                    </li>
-                  )}
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">
+                      <i className="bi bi-person"></i> Đăng Nhập
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </nav>
