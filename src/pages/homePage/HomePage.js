@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./homeScreen.css";
 import Logo from "../../assets/logononetext.png";
 import nghitet from "../../assets/nghitet.jpg";
+import nghitet2 from "../../assets/2.jpg";
 import { Carousel } from "react-bootstrap"; // Import Carousel từ react-bootstrap
 
 function LandingPage() {
@@ -52,7 +53,8 @@ function LandingPage() {
             >
               <img
                 className="d-block w-100"
-                src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/635/products/luoi-lan.jpg?v=1638755562233"
+                src={nghitet2}
+
                 alt="Second slide"
                 style={{
                   position: "absolute",
@@ -65,38 +67,11 @@ function LandingPage() {
               />
             </div>
             <Carousel.Caption>
-              <h3>Slide 2</h3>
-              <p>Đây là mô tả cho slide thứ hai.</p>
+            
             </Carousel.Caption>
           </Carousel.Item>
 
-          <Carousel.Item>
-            <div
-              style={{
-                width: "100%",
-                position: "relative",
-                height: "500px",
-              }}
-            >
-              <img
-                className="d-block w-100"
-                src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/635/products/luoi-lan.jpg?v=1638755562233"
-                alt="Third slide"
-                style={{
-                  position: "absolute",
-                  top: "0",
-                  left: "0",
-                  width: "100%",
-                  height: "500px",
-                  objectFit: "cover", // Maintain aspect ratio and fill the area
-                }}
-              />
-            </div>
-            <Carousel.Caption>
-              <h3>Slide 3</h3>
-              <p>Đây là mô tả cho slide thứ ba.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+       
         </Carousel>
         <div className="container">
           {/* Categories */}
