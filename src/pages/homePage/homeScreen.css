@@ -45,6 +45,80 @@
     animation-name: ringD;
     stroke: #f42582;
   }
+  /* Style cho card */
+ /* Style cho item-card */
+.item-card {
+  min-height: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative; /* Để dễ dàng đặt nút "Mua ngay" */
+}
+
+.item-card-img-top {
+  width: 100%;  /* Chiều rộng của ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+  height: 300px;  /* Chiều cao cố định của ảnh */
+  object-fit: cover;  /* Giữ tỷ lệ ảnh, cắt phần ảnh vượt ra ngoài vùng chứa nếu cần */
+  display: block;  /* Đảm bảo ảnh không có khoảng trống phía dưới */
+  margin: 0 auto;  /* Đảm bảo ảnh căn giữa nếu có */
+}
+
+/* Style cho phần nội dung của card */
+.item-card-body {
+  padding: 15px;
+  text-align: left; /* Căn trái cho tất cả nội dung */
+}
+
+/* Style cho tiêu đề */
+.item-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Style cho đoạn văn bản */
+.item-card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Hiển thị dấu ba chấm "..." khi có văn bản bị cắt */
+}
+.item-card-link {
+  position: relative; /* Cần có để đặt discount-tag ở vị trí tuyệt đối */
+}
+
+.discount-tag {
+  position: absolute;
+  top: 10px; /* Đặt cách góc trên bên phải một chút */
+  right: 10px; /* Đặt cách góc trên bên phải một chút */
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Nút "Mua ngay" */
+.item-card-button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Hover effect cho nút */
+.item-card-button:hover {
+  background-color: darkred;
+}
   
   /* Animations */
   @keyframes ringA {
