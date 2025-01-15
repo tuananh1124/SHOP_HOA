@@ -7,6 +7,25 @@
   .pl__ring {
     animation: ringA 2s linear infinite;
   }
+  .card-body {
+    height: 200px; /* Chiều cao cố định */
+    display: flex;
+    flex-direction: column;
+  }
+  .card-img-top {
+    height: 300px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng và chiếm toàn bộ không gian */
+  }
+  
+  .card-text {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
   
   .pl__ring--a {
     stroke: #f42f25;
@@ -202,4 +221,6 @@
       stroke-width: 20;
       stroke-dashoffset: -440;
     }
+
+    
   }
