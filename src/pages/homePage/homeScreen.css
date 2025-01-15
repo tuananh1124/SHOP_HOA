@@ -90,8 +90,8 @@
 
 .discount-tag {
   position: absolute;
-  top: 150px; /* Đặt cách góc trên bên phải một chút */
-  right: 340px; /* Đặt cách góc trên bên phải một chút */
+  top: 10px; /* Đặt cách góc trên bên phải một chút */
+  right: 10px; /* Đặt cách góc trên bên phải một chút */
   background-color: red;
   color: white;
   padding: 5px 10px;
