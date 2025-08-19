@@ -38,6 +38,7 @@
 .home-page .col-md-3 {
   transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
+  padding-bottom: 20px;
 }
 
 .home-page .col-md-3 .card:hover {
@@ -45,6 +46,7 @@
   color: #26a9e0;
   
 }
+
 
 
 

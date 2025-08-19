@@ -165,7 +165,7 @@ function LandingPage() {
             </div>
             {/* Category 3 */}
           </div>
-          <br></br>
+          
           <hr></hr>
           {/* Divider */}
           <div className="divider">

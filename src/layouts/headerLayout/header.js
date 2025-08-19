@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./header.css";
-import { Helmet } from "react-helmet"; // Import react-helmet
+import { Helmet } from "react-helmet";
 import Shop from "../../assets/shop.png";
 
 window.addEventListener("scroll", function () {
   const header = document.getElementById("mainHeader");
 
   if (window.scrollY > 100) {
-    // đổi 150px thành mốc bạn muốn
     header.classList.add("fixed");
   } else {
     header.classList.remove("fixed");
@@ -16,15 +15,18 @@ window.addEventListener("scroll", function () {
 });
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header id="mainHeader">
       <Helmet>
         <title>SHOP FLOWER</title>
-        <link rel="icon" href={Shop} type="image/png" />{" "}
-        {/* Đặt logo làm favicon */}
+        <link rel="icon" href={Shop} type="image/png" />
       </Helmet>
+
       <div className="container">
         <div className="row align-items-center">
+          {/* Logo */}
           <div className="col-2">
             <Link className="nav-link" to="/">
               <img
@@ -36,27 +38,21 @@ function Header() {
             </Link>
           </div>
 
+          {/* Menu */}
           <div className="col-10">
             <div className="d-flex flex-column">
-              {/* Search Bar */}
-
-              {/* Navigation */}
               <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
+                {/* Nút mở sidebar khi mobile */}
                 <button
-                  className="navbar-toggler ms-auto"
+                  className="navbar-toggler ms-auto d-lg-none"
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
+                  onClick={() => setIsOpen(true)}
                 >
                   <span className="navbar-toggler-icon"></span>
                 </button>
-                <div
-                  className="collapse navbar-collapse justify-content-center"
-                  id="navbarNav"
-                >
+
+                {/* Menu desktop */}
+                <div className="d-none d-lg-flex justify-content-center w-100">
                   <ul className="navbar-nav align-items-center">
                     {/* Search Bar */}
                     <li className="nav-item me-3">
@@ -137,6 +133,65 @@ function Header() {
               </nav>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Sidebar cho mobile */}
+      {/* Sidebar cho mobile */}
+      <div
+        className={`offcanvas-mobile ${isOpen ? "show" : ""}`}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "80%",
+          height: "100vh",
+          background: "#fff",
+          zIndex: 1050, // đảm bảo nằm trên content
+          transform: isOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.3s ease-in-out",
+        }}
+      >
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title">Menu</h5>
+          <button
+            type="button"
+            className="btn-close"
+            onClick={() => setIsOpen(false)}
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          <ul className="navbar-nav">
+            <li className="nav-item mb-2">
+              <Link
+                className="nav-link"
+                to="/"
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="bi bi-house"></i> Trang Chủ
+              </Link>
+            </li>
+            <li className="nav-item mb-2">
+              <Link
+                className="nav-link"
+                to="/"
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="bi bi-ui-checks-grid"></i> Tất Cả Sản Phẩm
+              </Link>
+            </li>
+            
+            <li className="nav-item mt-3">
+              <Link
+                className="nav-link"
+                to="/"
+                onClick={() => setIsOpen(false)}
+              >
+                <i className="bi bi-telephone-inbound"></i> Liên hệ đặt hàng: {" "}
+                <span style={{ color: "red" }}> 0336.420.793</span>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

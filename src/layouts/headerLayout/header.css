@@ -51,13 +51,72 @@ header .navbar-nav .nav-link:hover {
   animation: slideDown 1s ease forwards;
 }
 
-
 /* Custom width cho offcanvas */
 .offcanvas-custom {
-  width: 70% !important;   /* chỉ chiếm 70% */
-  max-width: 400px;        /* thêm giới hạn nếu muốn */
+  width: 70% !important; /* chỉ chiếm 70% */
+  max-width: 400px; /* thêm giới hạn nếu muốn */
 }
 
+/* Sidebar mobile */
+.offcanvas-mobile {
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.offcanvas-header .offcanvas-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.offcanvas-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Menu items */
+.offcanvas-body .nav-link {
+  border-radius: 5px;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.offcanvas-body .nav-link i {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+/* Hover effect */
+.offcanvas-body .nav-link:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Contact phone highlight */
+.offcanvas-body .nav-item span {
+  font-weight: bold;
+  color: red;
+}
+
+/* Scrollbar nếu menu dài */
+.offcanvas-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
 
 /* Keyframes cho hiệu ứng */
 @keyframes slideDown {
