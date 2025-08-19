@@ -5,7 +5,7 @@ import HomePage from './pages/homePage/HomePage';
 import Header from './layouts/headerLayout/header';
 import Footer from './layouts/footerLayout/footer';
 
-import LienHe from './pages/contact_page/contact_page';
+// import LienHe from './pages/contact_page/contact_page';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
 
-        <Route path="/lien-he" element={<LienHe />} /> {/* Trang liên hệ */}
+        {/* <Route path="/lien-he" element={<LienHe />} /> Trang liên hệ */}
       
       </Routes>
       <Footer />

@@ -28,6 +28,7 @@
     "swagger-ui-react": "^5.17.14",
     "sweetalert2": "^11.14.4",
     "web-vitals": "^2.1.4",
+    "webkit": "^0.0.0",
     "yup": "^1.5.0"
   },
   "scripts": {

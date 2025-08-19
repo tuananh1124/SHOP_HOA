@@ -1,25 +1,34 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './header.css';
-import Logo from '../../assets/logo.png';
 import { Helmet } from 'react-helmet'; // Import react-helmet
-import Logononetext from '../../assets/logononetext.png';
+import Shop from '../../assets/shop.png';
+
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("mainHeader");
+
+  if (window.scrollY > 200) { // đổi 150px thành mốc bạn muốn
+    header.classList.add("fixed");
+  } else {
+    header.classList.remove("fixed");
+  }
+});
+
+
 
 function Header() {
- 
-
   return (
-    <header>
+    <header id="mainHeader">
        <Helmet>
-        <title>Vinh Mi</title>
-        <link rel="icon" href={Logononetext} type="image/png" /> {/* Đặt logo làm favicon */}
+        <title>SHOP FLOWER</title>
+        <link rel="icon" href={Shop} type="image/png" /> {/* Đặt logo làm favicon */}
       </Helmet>
       <div className="container">
         <div className="row align-items-center">
         <div className="col-2">
   <Link className="nav-link" to="/">
     <img
-      src={Logo}
+      src={Shop}
       alt="Logo"
       className="img-fluid"
       style={{ maxWidth: '100%', maxHeight: '70px' }}
@@ -64,25 +73,25 @@ function Header() {
         <ul className="dropdown-menu menu-danhmuc" aria-labelledby="navbarDropdown">
           <li>
             <Link className="dropdown-item" to="/phim-theo-the-loai/Tình cảm">
-              Lưới lan
+              Hoa lan
             </Link>
           </li>
           <li>
             <Link className="dropdown-item" to="/phim-theo-the-loai/Kinh dị">
-              ống nước
+              Hoa mai
             </Link>
           </li>
           <li>
             <Link className="dropdown-item" to="/phim-theo-the-loai/Hành động">
-              Bạt chống thám
+              Lãng hoa
             </Link>
           </li>
         </ul>
       </li>
     
       <li className="nav-item">
-        <Link className="nav-link" to="/lien-he">
-          <i className="bi bi-telephone-inbound"></i> Liên Hệ đặt hàng: <i style={{ color: "red", textDecoration: "none" }}>   0908.416.475</i>
+        <Link className="nav-link" to="/">
+          <i className="bi bi-telephone-inbound"></i> Liên Hệ đặt hàng: <span style={{ color: "red", textDecoration: "none" }}> 0336.420.793</span>
 
         </Link>
       </li>

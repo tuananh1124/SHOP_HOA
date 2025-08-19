@@ -119,6 +119,11 @@
 .item-card-button:hover {
   background-color: darkred;
 }
+
+.divider{
+  text-align: center;
+  
+}
   
   /* Animations */
   @keyframes ringA {

@@ -11,21 +11,21 @@ function Footer() {
           <div className="col-md-4">
             <h5>KẾT NỐI QUA NỀN TẢNG</h5>
             <div className="social-icons">
-              <a href="https://zalo.me/0908416475" style={{ textDecoration: "none" }}>
-                <img
+              <a href="https://zalo.me/0336420793" style={{ textDecoration: "none" }}>
+                <img style={{width: "35px"}}
                   src={`https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg`}
                   alt="X"
                 />
-<b style={{ color: "red", fontSize: "25px", textDecoration: "none" }}>   0908.416.475</b>
+<b style={{ color: "red", fontSize: "20px", textDecoration: "none" }}>   0336.420.793</b>
 
               </a>
               <br/>
-              <a href="https://www.facebook.com/minhduc1122003"style={{ textDecoration: "none" }}>
-                <img
+              <a href="https://www.facebook.com/nguyntuananh1124"style={{ textDecoration: "none" }}>
+                <img style={{width: "35px"}}
                   src={`https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg`}
                   alt="Facebook"
                 />
-                <b style={{ color: "red", fontSize: "25px", textDecoration: "none" }}>   Quang Vĩnh</b>
+                <b style={{ color: "red", fontSize: "20px", textDecoration: "none" }}>   Lan Anh</b>
 
               </a>
              
@@ -36,16 +36,16 @@ function Footer() {
             <h5>Liên hệ</h5>
             <ul className="list-unstyled">
               <li>
-                <i className="fas fa-map-marker-alt"></i>  Phước Dân, Ninh Phước, Ninh Thuận
+                <i className="fas fa-map-marker-alt"></i>  Phường Đức Nhuận, Thành phố Hồ Chí Minh
 
               </li>
               <li>
                 <i className="fas fa-phone-alt"></i> Điện thoại:{" "}
-                <b style={{ color: "red" }}>0908.416.475</b>
+                <b style={{ color: "red" }}>0336.420.793</b>
               </li>
               <li>
                 <i className="fas fa-envelope"></i> Email:{" "}
-                <b style={{ color: "red" }}>minhduc1122003@gmail.com</b>
+                <b style={{ color: "red" }}>lananh@gmail.com</b>
               </li>
               <li>
                 <i className="fas fa-clock"></i> Giờ mở cửa: 08:00 - 17:00

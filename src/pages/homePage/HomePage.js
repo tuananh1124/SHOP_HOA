@@ -1,85 +1,86 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./homeScreen.css";
-import Logo from "../../assets/logononetext.png";
-import nghitet from "../../assets/nghitet.jpg";
-import nghitet2 from "../../assets/2.jpg";
+import "./homePage.css";
+import Shop from '../../assets/shop.png';
+
 import { Carousel } from "react-bootstrap"; // Import Carousel từ react-bootstrap
+import banner1 from "../../assets/banner1.png";
+import banner2 from "../../assets/banner2.png";
 
 function LandingPage() {
   return (
     <div>
       {/* Main Content */}
       <main>
-        <Carousel
-          style={{ minHeight: "500px" }} // Ensure the minimum height is 500px
-          interval={3000} // Auto-slide every 3 seconds
-          fade // Add smooth transition effect
-        >
+        <Carousel interval={3000} fade>
           <Carousel.Item>
-            <div
+            <img
+              className="d-block w-100 img-fluid"
+              src={banner1}
+              alt="First slide"
               style={{
-                width: "100%",
-                position: "relative",
-                height: "500px",
+                objectFit: "cover", // vẫn giữ tỉ lệ và lấp kín khung
+                maxHeight: "400px", // ảnh không cao quá
               }}
-            >
-              <img
-                className="d-block w-100"
-                src={nghitet}
-                alt="First slide"
-                style={{
-                  position: "absolute",
-                  top: "0",
-                  left: "0",
-                  width: "100%",
-                  height: "500px",
-                  objectFit: "cover", // Maintain aspect ratio and fill the area
-                }}
-              />
-            </div>
-            <Carousel.Caption>
-              {/* Add caption content here */}
-            </Carousel.Caption>
+            />
           </Carousel.Item>
 
           <Carousel.Item>
-            <div
+            <img
+              className="d-block w-100 img-fluid"
+              src={banner2}
+              alt="Second slide"
               style={{
-                width: "100%",
-                position: "relative",
-                height: "500px",
+                objectFit: "cover",
+                maxHeight: "400px",
               }}
-            >
-              <img
-                className="d-block w-100"
-                src={nghitet2}
-
-                alt="Second slide"
-                style={{
-                  position: "absolute",
-                  top: "0",
-                  left: "0",
-                  width: "100%",
-                  height: "500px",
-                  objectFit: "cover", // Maintain aspect ratio and fill the area
-                }}
-              />
-            </div>
-            <Carousel.Caption>
-            
-            </Carousel.Caption>
+            />
           </Carousel.Item>
-
-       
         </Carousel>
+
         <div className="container">
           {/* Categories */}
+          <br></br>
+          <div className="row">
+            <div className="col-md-4" >              
+              <div className="card mb-4 p-3" style={{background: "#e3e3e3"}}>    
+                <h5 className="card-title">
+                  <i className="fas fa-truck me-2"></i> 
+                  Giao hàng đúng giờ
+                </h5>
+                <p className="card-text">
+                  Cam kết đúng giờ, đảm bảo sản phẩm
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">              
+              <div className="card mb-4 p-3" style={{background: "#75b798ad"}}>    
+                <h5 className="card-title" >
+                  <i class="bi bi-stars me-2"></i> 
+                   Cam kết chất lượng
+                </h5>
+                <p className="card-text">
+                   Hoa tươi mới mỗi ngày không héo úa
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">              
+              <div className="card mb-4 p-3" style={{background: "#dc35458c"}}>    
+                <h5 className="card-title">
+                  <i class="bi bi-telephone-inbound-fill me-2"></i> 
+                     Hotline: 0336.420.793
+                </h5>
+                <p className="card-text">
+                  Tư vấn theo phù hợp giá tiền
+                </p>
+              </div>
+            </div>        
+          </div>
 
           <br></br>
 
           <div className="divider">
-            <h2>Sản phẩm kinh doanh</h2>
+            <h3>DANH MỤC NỔI BẬT</h3>
             <hr></hr>
           </div>
           <div className="row">
@@ -329,7 +330,7 @@ function LandingPage() {
                   className="item-card-link"
                 >
                   <img
-                                           src={Logo}
+                                           src={Shop}
 
                     className="item-card-img-top"
                     alt="Sample Movie"
@@ -374,7 +375,7 @@ function LandingPage() {
                   className="item-card-link"
                 >
                   <img
-                      src={Logo}
+                      src={Shop}
                     className="item-card-img-top"
                     alt="Sample Movie"
                     style={{
