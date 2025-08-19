@@ -71,7 +71,7 @@ function LandingPage() {
                      Hotline: 0336.420.793
                 </h5>
                 <p className="card-text">
-                  Tư vấn theo phù hợp giá tiền
+                  Tư vấn theo phù hợp giá tiền 
                 </p>
               </div>
             </div>        
@@ -117,35 +117,7 @@ function LandingPage() {
             </div>
 
             {/* Category 2 */}
-            <div className="col-md-4">
-              <div className="card mb-4">
-                <img
-                  src="https://diennuocthinhthanh.com/wp-content/uploads/2022/04/ong-nhua-pvc-binh-minh-co-may-loai.jpg"
-                  className="card-img-top"
-                  alt="Lãng mạn"
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-center">Ống nước</h5>
-                  <p className="card-text">
-                    Đây là một sản phẩm lưới lan chất lượng, giúp bảo vệ và chăm
-                    sóc cây lan của bạn một cách hiệu quả. Đây là một sản phẩm
-                    lưới lan chất lượng, giúp bảo vệ và chăm sóc cây lan của bạn
-                    một cách hiệu quả.
-                  </p>
-                  <div className="d-flex justify-content-end mt-auto">
-                    <Link
-                      to="/products?genre=Romantic"
-                      className="btn btn-dark mx-2"
-                    >
-                      Xem chi tiết
-                    </Link>
-                    <Link to="/contact" className="btn btn-danger mx">
-                      Liên hệ đặt hàng
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* Category 3 */}
             <div className="col-md-4">
