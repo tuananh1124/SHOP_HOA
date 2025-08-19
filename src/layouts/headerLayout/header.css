@@ -51,6 +51,14 @@ header .navbar-nav .nav-link:hover {
   animation: slideDown 1s ease forwards;
 }
 
+
+/* Custom width cho offcanvas */
+.offcanvas-custom {
+  width: 70% !important;   /* chỉ chiếm 70% */
+  max-width: 400px;        /* thêm giới hạn nếu muốn */
+}
+
+
 /* Keyframes cho hiệu ứng */
 @keyframes slideDown {
   from {
