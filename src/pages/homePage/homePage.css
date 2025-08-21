@@ -119,32 +119,42 @@
   position: relative; /* Cần có để đặt discount-tag ở vị trí tuyệt đối */
 }
 
-.discount-tag {
-  position: absolute;
-  top: 10px; /* Đặt cách góc trên bên phải một chút */
-  right: 10px; /* Đặt cách góc trên bên phải một chút */
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  font-weight: bold;
-  border-radius: 5px;
-  font-size: 14px;
+
+.product-card .card-body {
+  height: 120px;              /* đặt chiều cao tùy ý (ví dụ 120px) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* dàn đều title và giá+button */
+  padding: 10px 12px;         /* giảm padding cho gọn */
 }
 
-/* Nút "Mua ngay" */
-.item-card-button {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background-color: red;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-align: center;
+.product-card {
+  margin-bottom: 15px;
 }
+
+
+/* Giới hạn title chỉ 2 dòng */
+.product-card .card-title {
+  font-size: 1rem;            /* giữ cho đồng đều */
+  line-height: 1.4;           /* khoảng cách dòng */
+  height: 2.8em;              /* = line-height * 2 => đúng 2 dòng */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* Giới hạn 2 dòng */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* Padding cho ảnh */
+.product-card .product-img {
+  padding: 10px;              /* thêm khoảng cách cho ảnh */
+  object-fit: cover; 
+  
+  width: 100%;/* để ảnh không méo */
+  height: 40vh;
+
+}
+
 
 /* Hover effect cho nút */
 .item-card-button:hover {

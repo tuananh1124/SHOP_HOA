@@ -42,16 +42,35 @@ function Header() {
           <div className="col-10">
             <div className="d-flex flex-column">
               <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
-                {/* Nút mở sidebar khi mobile */}
-                <button
-                  className="navbar-toggler ms-auto d-lg-none"
-                  type="button"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
+                {/* Mobile: Search + Toggle */}
+                <div className="d-flex justify-content-between align-items-center w-100 d-lg-none">
+                  {/* Search bar bên trái */}
+                  <form className="d-flex flex-grow-1 me-2">
+                    <input
+                      className="form-control flex-grow-1"
+                      type="search"
+                      placeholder="Tìm kiếm..."
+                      aria-label="Search"
+                    />
+                    <button
+                      className="btn btn-outline-success ms-2"
+                      type="submit"
+                    >
+                      <i className="bi bi-search"></i>
+                    </button>
+                  </form>
 
-                {/* Menu desktop */}
+                  {/* Toggle bên phải */}
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    onClick={() => setIsOpen(true)}
+                  >
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+
+                {/* Desktop Menu */}
                 <div className="d-none d-lg-flex justify-content-center w-100">
                   <ul className="navbar-nav align-items-center">
                     {/* Search Bar */}
@@ -180,14 +199,14 @@ function Header() {
                 <i className="bi bi-ui-checks-grid"></i> Tất Cả Sản Phẩm
               </Link>
             </li>
-            
+
             <li className="nav-item mt-3">
               <Link
                 className="nav-link"
                 to="/"
                 onClick={() => setIsOpen(false)}
               >
-                <i className="bi bi-telephone-inbound"></i> Liên hệ đặt hàng: {" "}
+                <i className="bi bi-telephone-inbound"></i> Liên hệ đặt hàng:{" "}
                 <span style={{ color: "red" }}> 0336.420.793</span>
               </Link>
             </li>
