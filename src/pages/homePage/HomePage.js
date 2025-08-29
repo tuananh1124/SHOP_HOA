@@ -5,7 +5,7 @@ import "./homePage.css";
 import { Carousel } from "react-bootstrap"; // Import Carousel từ react-bootstrap
 import banner1 from "../../assets/banner1.png";
 import banner2 from "../../assets/banner2.png";
-import banner3 from "../../assets/banner3.jpg";
+import banner3 from "../../assets/banner3.webp";
 
 function LandingPage() {
   return (
@@ -19,8 +19,8 @@ function LandingPage() {
               src={banner1}
               alt="First slide"
               style={{
-                objectFit: "cover", // vẫn giữ tỉ lệ và lấp kín khung
-                maxHeight: "400px", // ảnh không cao quá
+                objectFit: "cover", 
+                maxHeight: "500px", 
               }}
             />
           </Carousel.Item>
@@ -32,10 +32,11 @@ function LandingPage() {
               alt="Second slide"
               style={{
                 objectFit: "cover",
-                maxHeight: "400px",
+                maxHeight: "500px",
               }}
             />
           </Carousel.Item>
+
           <Carousel.Item>
             <img
               className="d-block w-100 img-fluid"
@@ -43,7 +44,7 @@ function LandingPage() {
               alt="Second slide"
               style={{
                 objectFit: "cover",
-                maxHeight: "400px",
+                maxHeight: "500px",
               }}
             />
           </Carousel.Item>

@@ -101,15 +101,14 @@ function Header() {
 
                     {/* Dropdown */}
                     <li className="nav-item dropdown">
-                      <button
+                      <Link
                         className="nav-link dropdown-toggle"
-                        type="button"
+                        to="/san-pham"
                         id="navbarDropdown"
-                        data-bs-toggle="dropdown"
-                        aria-label="Toggle Dropdown"
+                        role="button"
                       >
                         <i className="bi bi-ui-checks-grid"></i> Tất Cả Sản Phẩm
-                      </button>
+                      </Link>
                       <ul
                         className="dropdown-menu menu-danhmuc"
                         aria-labelledby="navbarDropdown"
@@ -139,7 +138,7 @@ function Header() {
 
                     {/* Liên hệ */}
                     <li className="nav-item">
-                      <Link className="nav-link" to="/">
+                      <Link className="nav-link" to="/lien-he">
                         <i className="bi bi-telephone-inbound"></i> Liên hệ đặt
                         hàng:{" "}
                         <span style={{ color: "red", textDecoration: "none" }}>
@@ -193,7 +192,7 @@ function Header() {
             <li className="nav-item mb-2">
               <Link
                 className="nav-link"
-                to="/"
+                to="/san-pham"
                 onClick={() => setIsOpen(false)}
               >
                 <i className="bi bi-ui-checks-grid"></i> Tất Cả Sản Phẩm
@@ -203,7 +202,7 @@ function Header() {
             <li className="nav-item mt-3">
               <Link
                 className="nav-link"
-                to="/"
+                to="/lien-he"
                 onClick={() => setIsOpen(false)}
               >
                 <i className="bi bi-telephone-inbound"></i> Liên hệ đặt hàng:{" "}

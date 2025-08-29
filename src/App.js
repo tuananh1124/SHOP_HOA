@@ -5,8 +5,8 @@ import HomePage from './pages/homePage/HomePage';
 import Header from './layouts/headerLayout/header';
 import Footer from './layouts/footerLayout/footer';
 
-// import LienHe from './pages/contact_page/contact_page';
-
+import LienHe from  './pages/contactPage/ContactForm';
+import Detail  from './pages/DetailPage/DetailForm';
 function App() {
 
   return (
@@ -15,8 +15,9 @@ function App() {
       
       <Routes>
         <Route path="/" element={<HomePage />} />
-
-        {/* <Route path="/lien-he" element={<LienHe />} /> Trang liên hệ */}
+        <Route path="/lien-he" element={<LienHe />} /> 
+        <Route path="/san-pham" element={<Detail />} /> 
+        
       
       </Routes>
       <Footer />
